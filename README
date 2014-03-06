@@ -1,0 +1,25 @@
+This is a quick project used to demostrate the automatic conversion of an object to its json represenation
+using the Spring MVC framework. The prject also demostrates a custom serialiser which ignores some of the
+attributes of the serialised object.
+
+The specific technologies involved are:
+
+  Spring 4.0.2 (MVC)
+  Jackson 2.x
+
+To run the project from the top level directory:
+
+  mvn jetty:run
+
+To test the conversion:
+
+  http://localhost:8090/TestApp/module/{modulecode}
+
+  e.g.:
+
+  http://localhost:8090/TestApp/module/MATHS1001
+
+The resulting json should look something like this:
+
+  {"code":"MATHS1001","results":[{"grade":30.0,"grade":40.0,"grade":5.0}]}
+
