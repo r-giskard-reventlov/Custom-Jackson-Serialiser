@@ -29,11 +29,11 @@ public class ModuleJsonSerializer extends JsonSerializer<Module> {
         jg.writeStringField("code", module.getCode());
         jg.writeFieldName("results");
         jg.writeStartArray();
-        jg.writeStartObject();
         for(Result result : module.getResults()) {
+            jg.writeStartObject();
             jg.writeNumberField("grade", result.getGrade());
+            jg.writeEndObject();
         }
-        jg.writeEndObject();
         jg.writeEndArray();
         jg.writeEndObject();
     }
